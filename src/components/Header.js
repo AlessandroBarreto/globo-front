@@ -22,7 +22,7 @@ const Header = () => {
         </div>
         <div className="text-content">
           <h1>Olá, Andrey!</h1>
-          <span>antonio@gmail.com</span>
+          <span>andrey@gmail.com</span>
           <hr />
           <h2>
             Feed de <b>Insights</b>

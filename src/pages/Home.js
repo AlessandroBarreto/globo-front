@@ -4,7 +4,7 @@ import "../styles/home.scss";
 
 const Home = () => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" disableGutters>
       <div className="home-container">
         <Header />
       </div>
