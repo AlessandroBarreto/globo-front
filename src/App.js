@@ -1,10 +1,21 @@
+import Home from "./pages/Home";
+import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import "./App.scss";
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#ED4D77",
+      },
+    },
+  });
   return (
-    <div className="App">
-      <h1>batata doce pipi dsfdflala</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Home />
+      </div>
+    </ThemeProvider>
   );
 }
 
