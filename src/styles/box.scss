@@ -1,0 +1,33 @@
+.card-container {
+  padding: 16px;
+  width: auto;
+
+  h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  .tag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tag-card {
+      border-radius: 4px;
+      margin: 4px;
+      padding: 8px;
+      width: fit-content;
+      //border: 1px solid #ed4d77;
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 0px 0px 1px rgba(237, 77, 119, 0.24);
+
+      span {
+        font-size: 10px;
+        font-weight: 700;
+        color: #ed4d77;
+      }
+    }
+  }
+}
