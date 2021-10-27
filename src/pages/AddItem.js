@@ -1,10 +1,33 @@
 import HeaderSecondary from "../components/HeaderSecondary";
+import Container from "@mui/material/Container";
+
+import Card from "@mui/material/Card";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import "../styles/addItem.scss";
 
 const AddItem = () => {
   return (
-    <div>
+    <div className="addItem-container">
       <HeaderSecondary />
-      add item page
+      <Container maxWidth="sm">
+        <Card classes={{ root: "card-edit-container" }}>
+          <TextField
+            id="standard-multiline-static"
+            label="INSIGHT"
+            multiline
+            rows={6}
+            placeholder="Escreva seu insight aqui"
+            variant="standard"
+            fullWidth
+            color="primary"
+            helperText="limite de caracteres: 400"
+          />
+        </Card>
+        <Button variant="contained" color="primary" fullWidth>
+          PUBLICAR
+        </Button>
+      </Container>
     </div>
   );
 };
