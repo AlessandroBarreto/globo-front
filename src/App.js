@@ -1,5 +1,7 @@
 import Home from "./pages/Home";
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import AddItem from "./pages/AddItem";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
 
 function App() {
@@ -12,9 +14,14 @@ function App() {
   });
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <Home />
-      </div>
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/add-item" component={AddItem} />
+          </Switch>
+        </div>
+      </Router>
     </ThemeProvider>
   );
 }
