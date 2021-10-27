@@ -8,7 +8,7 @@ const Box = ({ text, tagName }) => {
       <div className="tag-container">
         {tagName.map((name) => {
           return (
-            <div className="tag-card">
+            <div key={name} className="tag-card">
               <span>{name.toUpperCase()}</span>
             </div>
           );
