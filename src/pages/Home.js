@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header from "../components/Header";
 import Box from "../components/Box";
 import SearchBox from "../components/SearchBox";
@@ -8,14 +8,10 @@ import API_DATA from "../mocks/api";
 import "../styles/home.scss";
 
 const Home = () => {
-  const [filter, setFilter] = useState(API_DATA);
-  const filteredList = (inputValue ) => {
-    console.log(inputValue);
-    //setFilter(API_DATA.filter((e) => e.tags.join().includes("batata")));
-  };
-
-
-  //console.log(API_DATA, filteredList());
+  const [inputValue, setInputValue] = useState("");
+  const filteredList = API_DATA.filter((e) =>
+    e.tags.join().includes(inputValue.toLocaleLowerCase())
+  );
 
   return (
     <Container maxWidth="md" disableGutters>
@@ -27,17 +23,25 @@ const Home = () => {
           justifyContent="center"
           classes={{ container: "grid-container" }}
         >
-          {filter.map((info) => {
+          {filteredList.map((info) => {
             return (
               <Grid key={info.id} item sm={6}>
                 <Box text={info.text} tagName={info.tags} />
               </Grid>
             );
           })}
+        </Grid>
+        <Grid
+          container
+          spacing={1}
+          justifyContent="center"
+          classes={{ container: "grid-container" }}
+        >
           <Grid item sm={6} xs={12}>
             <SearchBox
               placeholder="Pesquise por termos ou categorias..."
-              handleInput={(value) => filteredList(value)}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
             />
           </Grid>
         </Grid>

@@ -1,17 +1,8 @@
-import { useState } from "react";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 
-const SearchBox = ({ placeholder, handleInput }) => {
-  const [inputValue, setInputValue] = useState("");
-
-  const handleChange = (value) => {
-    setInputValue(value);
-  };
-
-  handleInput(inputValue);
-
+const SearchBox = ({ placeholder, value, onChange }) => {
   return (
     <Paper
       //component="form"
@@ -31,8 +22,8 @@ const SearchBox = ({ placeholder, handleInput }) => {
           fontStyle: "italic",
         }}
         placeholder={placeholder}
-        value={inputValue}
-        onChange={(e) => handleChange(e.target.value)}
+        value={value}
+        onChange={onChange}
       />
       <SearchIcon />
     </Paper>
