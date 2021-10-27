@@ -3,7 +3,14 @@
   justify-content: center;
   flex-direction: column;
 
-  .grid-container {
+  .grid-container-box {
     padding: 16px;
+    margin-bottom: 60px;
+  }
+  .grid-container-search-box {
+    padding: 16px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
   }
 }

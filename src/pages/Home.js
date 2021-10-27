@@ -21,7 +21,7 @@ const Home = () => {
           container
           spacing={1}
           justifyContent="center"
-          classes={{ container: "grid-container" }}
+          classes={{ container: "grid-container-box" }}
         >
           {filteredList.map((info) => {
             return (
@@ -35,7 +35,7 @@ const Home = () => {
           container
           spacing={1}
           justifyContent="center"
-          classes={{ container: "grid-container" }}
+          classes={{ container: "grid-container-search-box" }}
         >
           <Grid item sm={6} xs={12}>
             <SearchBox
