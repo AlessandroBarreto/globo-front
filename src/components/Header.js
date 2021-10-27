@@ -3,30 +3,14 @@ import AddIcon from "@mui/icons-material/Add";
 import IconButton from "@mui/material/IconButton";
 import eu from "../assets/eu.jpg";
 import logo from "../assets/brand-insights.svg";
+import { scrollFunction } from "../utils/functions";
 import "../styles/header.scss";
 
 const Header = () => {
   window.onscroll = () => {
-    scrollFunction();
+    scrollFunction("text-content");
   };
 
-  const scrollFunction = () => {
-    const textContentId = document.getElementById("text-content").style;
-    if (
-      document.body.scrollTop > 80 ||
-      document.documentElement.scrollTop > 80
-    ) {
-      textContentId.visibility = "hidden";
-      textContentId.opacity = "0";
-      textContentId.maxHeight = "0";
-      textContentId.paddingTop = "0px";
-    } else {
-      textContentId.visibility = "visible";
-      textContentId.opacity = "1";
-      textContentId.maxHeight = "200px";
-      textContentId.paddingTop = "20px";
-    }
-  };
   return (
     <div className="header-container">
       <div className="header-content">
