@@ -1,5 +1,6 @@
 import { useState } from "react";
 import HeaderSecondary from "../components/HeaderSecondary";
+import MultipleSelect from "../components/MultipleSelect";
 import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
@@ -27,6 +28,7 @@ const AddItem = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
+        <MultipleSelect/>
         </Card>
         <Button variant="contained" color="primary" fullWidth>
           PUBLICAR
