@@ -9,6 +9,7 @@ import "../styles/header.scss";
 
 const Header = () => {
   window.onscroll = () => {
+    console.log("chamando onscroll")
     scrollFunction("text-content");
   };
 

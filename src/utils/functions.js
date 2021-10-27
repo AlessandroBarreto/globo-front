@@ -1,5 +1,9 @@
 const scrollFunction = (idName) => {
   const textContentId = document.getElementById(idName)?.style;
+
+  //case change page
+  if (!textContentId) return;
+
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     textContentId.visibility = "hidden";
     textContentId.opacity = "0";
